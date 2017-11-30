@@ -1,1 +1,1 @@
-# Mash
+# TEMPLATE FOR WEBSITES - created by Nathaniel Spry

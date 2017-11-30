@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TEMPLATE | Nathaniel Spry</title>
+
+    <!-- CSS Reset Sheet -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/javascript/jquery-3.2.1.js"></script>
+    <!-- Google Fonts -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css">
+    <script src="assets/javascript/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(window).load(function() {
+        $('.flexslider').flexslider();
+      });
+    </script>
+    <!-- Mash CSS Sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/mash.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mash-buttons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mash-colors.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarDropdownLinks" aria-controls="navbarDropdownLinks" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      
+      <a class="navbar-brand" href="#">
+        <img class="brand-image" src="assets/images/mash.png">
+      </a>
+      <style type="text/css">.brand-image { width: 64px; }</style>
+
+      <div class="collapse navbar-collapse" id="navbarDropdownLinks">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="systemDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Systems</a>
+            <div class="dropdown-menu text-center" aria-labelledby="systemDropdown">
+              <label class="smsquare-btn">
+                <input type="radio" name="systems" id="sysOption1" autocomplete="off"> System 1
+              </label>
+              <label class="smsquare-btn">
+                <input type="radio" name="systems" id="sysOption2" autocomplete="off"> System 2
+              </label>
+              <label class="smsquare-btn">
+                <input type="radio" name="systems" id="sysOption3" autocomplete="off"> System 3
+              </label>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu text-center" aria-labelledby="categoryDropdown">
+              <label class="smsquare-btn">
+                <input type="radio" name="categories" id="catOption1" autocomplete="off"> Category 1
+              </label>
+              <label class="smsquare-btn">
+                <input type="radio" name="categories" id="catOption2" autocomplete="off"> Category 2
+              </label>
+              <label class="smsquare-btn">
+                <input type="radio" name="categories" id="catOption3" autocomplete="off"> Category 3
+              </label>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="linkDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Links</a>
+            <div class="dropdown-menu text-center" aria-labelledby="linkDropdown">
+              <a class="dropdown-item" href="#">Links 1</a>
+              <a class="dropdown-item" href="#">Links 2</a>
+              <a class="dropdown-item" href="#">Links 3</a>
+            </div>
+          </li>
+        </ul>
+
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search a game">
+          <button class="thinrounded-btn my-2 my-sm-0" type="submit"><span class="fa fa-search" aria-hidden="true"></span></button>
+        </form>
+      </div>
+    </nav>
+
+    <header class="container">
+      <h1>Mash</h1>
+      <h3 class="text-muted">All-in-one gaming site</h3>
+
+      <div class="jumbotron">
+        <h3>Check out the latest hype!</h3>
+        <!-- <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="assets/images/placeholder1.jpg" style="height: 400px; width: 1070px;"/>
+            </li>
+            <li>
+              <img src="assets/images/placeholder2.jpg" style="height: 400px; width: 1070px;"/>
+            </li>
+            <li>
+              <img src="assets/images/placeholder3.jpg" style="height: 400px; width: 1070px;"/>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </header>
+
+    <section class="container gaming-news">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Gaming News</h4>
+              <h6 class="card-subtitle mb-2 text-muted">News from your favorite and most popular sources.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Recently Visited</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Tabs will only appear here if you've previously visited a page.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Gaming News</h4>
+              <h6 class="card-subtitle mb-2 text-muted">News from your favorite and most popular sources.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Recently Visited</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Tabs will only appear here if you've previously visited a page.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container d-flex justify-content-center">
+      <div class="row">
+
+        <div class="col-12 col-lg-4 nav-card">
+          <div class="card mx-auto" style="width: 20rem;">
+            <img class="card-img-top" src="assets/images/placeholder1.jpg" style="height: 180px; width: 318px;" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Popular Games</h4>
+              <p class="card-text">Coming Soon.</p>
+              <a href="#" class="smcircle-btn">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 nav-card">
+          <div class="card mx-auto" style="width: 20rem;">
+            <img class="card-img-top" src="assets/images/placeholder2.jpg" style="height: 180px; width: 318px;" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Recently Released</h4>
+              <p class="card-text">Coming Soon.</p>
+              <a href="#" class="smcircle-btn">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 nav-card">
+          <div class="card mx-auto" style="width: 20rem;">
+            <img class="card-img-top" src="assets/images/placeholder3.jpg" style="height: 180px; width: 318px;" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Coming Soon</h4>
+              <p class="card-text">Coming Soon.</p>
+              <a href="#" class="smcircle-btn">View More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+  <!-- Bootstrap 4 JS -->
+  <script type="text/javascript" src="assets/javascript/tether.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/javascript/bootstrap.min.js"></script>
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/javascript/navbar.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </body>
+</html>

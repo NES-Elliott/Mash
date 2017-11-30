@@ -1,0 +1,47 @@
+/* SECTION COLORS */
+body {
+  background-color: #5D5F60;
+}
+nav, nav #navbarDropdownLinks, .dropdown-menu, footer {
+  background-color: #292B2C;
+}
+.dropdown-item {
+  color: #C9CACA;
+}
+.dropdown-item:hover {
+  color: #FFF;
+  background-color: #111213;
+}
+.jumbotron, .card {
+  border-color: transparent;
+  background-color: #A1ADB7;
+}
+/* BUTTON COLORS */
+.thinrounded-btn {
+  border: 1px solid #008000 !important;
+  color: #008000 !important;
+}
+.thinrounded-btn:hover {
+  background-color: #008000 !important;
+  color: #FFF !important;
+}
+.smsquare-btn {
+  background-color: #292B2C;
+  border: 3px solid #292B2C !important;
+  color: #C9CACA !important;
+}
+.smsquare-btn:hover {
+  background-color: #111213 !important;
+  border: 3px solid #000 !important;
+  color: #FFF !important;
+}
+.smcircle-btn {
+  background-color: #292B2C;
+  border: 3px solid #292B2C !important;
+  color: #C9CACA !important;
+}
+.smcircle-btn:hover {
+  background-color: #008000;
+  border: 3px solid #292B2C !important;
+  color: #292B2C !important;
+}
