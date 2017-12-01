@@ -45,3 +45,19 @@ nav, nav #navbarDropdownLinks, .dropdown-menu, footer {
   border: 3px solid #292B2C !important;
   color: #292B2C !important;
 }
+/* TEXT COLORS AND FONTS */
+.main-header-text {
+  color: orange;
+}
+.section-header-text {
+  color: purple;
+}
+.sub-header-text {
+  color: red;
+}
+.link-header-text {
+  color: green;
+}
+.link-text {
+  color: blue;
+}

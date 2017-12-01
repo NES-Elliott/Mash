@@ -33,22 +33,24 @@
 /*======*/
 /* MAIN SECTIONS */
 body {
-  padding-top: 100px;
+  margin-top: 15vh;
 }
 section {
   margin-top: 70px;
 }
 /* NAVBAR */
 nav {
-  height: 80px;
+  height: 10vh;
+}
+.brand-image {
+  width: 128px;
 }
 /* HEADER */
 header {
-  margin-bottom: 30px;
-  height: 70vh;
+  height: 85vh;
 }
 header .jumbotron {
-  height: 90%;
+  height: 70%;
 }
 /* GAMING NEWS */
 .gaming-news {
