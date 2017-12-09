@@ -30,85 +30,57 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
-      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarDropdownLinks" aria-controls="navbarDropdownLinks" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      
-      <a class="navbar-brand" href="#">
-        <img class="brand-image" src="assets/images/mashlogo.png">
-      </a>
-
-      <div class="collapse navbar-collapse" id="navbarDropdownLinks">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="systemDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="link-header-text" id="sysHeader">Systems</span></a>
-            <div class="dropdown-menu text-center" id="sysDiv" aria-labelledby="systemDropdown">
-              <label class="smsquare-btn">
-                <input type="radio" name="systems" id="sysOption1" autocomplete="off"> <span class="link-text">System 1</span>
-              </label>
-              <label class="smsquare-btn">
-                <input type="radio" name="systems" id="sysOption2" autocomplete="off"> <span class="link-text">System 2</span>
-              </label>
-              <label class="smsquare-btn">
-                <input type="radio" name="systems" id="sysOption3" autocomplete="off"> <span class="link-text">System 3</span>
-              </label>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle link-header-text" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="link-header-text" id="catHeader">Categories</span></a>
-            <div class="dropdown-menu text-center" id="catDiv" aria-labelledby="categoryDropdown">
-              <label class="smsquare-btn">
-                <input type="radio" name="categories" id="catOption1" autocomplete="off"> <span class="link-text">Category 1</span>
-              </label>
-              <label class="smsquare-btn">
-                <input type="radio" name="categories" id="catOption2" autocomplete="off"> <span class="link-text">Category 2</span>
-              </label>
-              <label class="smsquare-btn">
-                <input type="radio" name="categories" id="catOption3" autocomplete="off"> <span class="link-text">Category 3</span>
-              </label>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle link-header-text" id="linkDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="link-header-text">Other Links</span></a>
-            <div class="dropdown-menu text-center" aria-labelledby="linkDropdown">
-              <a class="dropdown-item link-text" href="#">Links 1</a>
-              <a class="dropdown-item link-text" href="#">Links 2</a>
-              <a class="dropdown-item link-text" href="#">Links 3</a>
-            </div>
-          </li>
-        </ul>
-
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search a game">
-          <button class="thinrounded-btn my-2 my-sm-0" type="submit"><span class="fa fa-search" aria-hidden="true"></span></button>
-        </form>
-      </div>
-    </nav>
-
     <header class="container">
       <h1 class="main-header-text">Mash</h1>
       <h3 class="sub-header-text">All-in-one gaming site</h3>
 
       <div class="jumbotron">
         <h3 class="section-header-text">Check out the latest hype!</h3>
-        <!-- <div class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="assets/images/placeholder1.jpg" style="height: 400px; width: 1070px;"/>
-            </li>
-            <li>
-              <img src="assets/images/placeholder2.jpg" style="height: 400px; width: 1070px;"/>
-            </li>
-            <li>
-              <img src="assets/images/placeholder3.jpg" style="height: 400px; width: 1070px;"/>
-            </li>
-          </ul>
-        </div> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 sysSelected"></div>
+            <div class="col-12 col-lg-6 catSelected"></div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="list-group sysDiv"></div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="list-group catDiv"></div>
+            </div>
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="container gaming-news">
       <div class="row">
-        <div class="col-12 col-lg-8">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-title section-header-text">Recommended</h4>
+                  <h6 class="card-subtitle mb-2 sub-header-text">Popular games right now.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-title section-header-text">Recently Viewed</h4>
+                  <h6 class="card-subtitle mb-2 sub-header-text">Games you've looked at.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
           <div class="card">
             <div class="card-block">
               <h4 class="card-title section-header-text">Gaming News</h4>
@@ -116,38 +88,11 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title section-header-text">Recently Visited</h4>
-              <h6 class="card-subtitle mb-2 sub-header-text">Tabs will only appear here if you've previously visited a page.</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-8">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title section-header-text">UNDECIDED</h4>
-              <h6 class="card-subtitle mb-2 sub-header-text">UNDECIDED</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title section-header-text">UNDECIDED</h4>
-              <h6 class="card-subtitle mb-2 sub-header-text">UNDECIDED</h6>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="container d-flex justify-content-center">
+<!--     <section class="container d-flex justify-content-center">
       <div class="row">
-
         <div class="col-12 col-lg-4 nav-card">
           <div class="card mx-auto" style="width: 20rem;">
             <img class="card-img-top" src="assets/images/placeholder1.jpg" style="height: 180px; width: 318px;" alt="Card image cap">
@@ -180,9 +125,8 @@
             </div>
           </div>
         </div>
-
       </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
       <div class="container">

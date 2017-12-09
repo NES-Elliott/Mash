@@ -1,49 +1,77 @@
-$(document).ready(function(){
+$(document).ready(function() {
+// STORES THE USER'S NAVBAR DATA
+  var userPicks = {
+    sysName: "",
+    sysId: "",
+    catName: "",
+    catId: ""
+  };
 
   // SYSTEMS
   // - POPULATE THE DROPDOWN
-  var systems = ["Playstation", "XBox", "Nintendo", "PC", "Mac"];
-  $("#sysDiv").html(" ");
-  for (var i = 0; i < systems.length; i++) {
-    var newLabel = $("<label>").addClass("smsquare-btn");
-    var newBtnLabel = $("<input>").addClass("sysOption").attr("type", "radio").attr("name", "systems").attr("autocomplete", "off").attr("value", systems[i]);
-    var newBtnText = $("<span>").addClass("link-text").text(" " + systems[i]);
-    newLabel.append(newBtnLabel);
-    newLabel.append(newBtnText);
-    $("#sysDiv").append(newLabel);
+  var platformArray = [];
+  function getPlatforms() {
+    $.get("http://localhost:3001/platforms", function(data) {
+      for (var a = 0; a < data.body.length; a++) {
+        platformArray.push({id: data.body[a].id, name: data.body[a].name});
+      };
+    })
+    .done(function() {
+      $(".sysDiv").html(" ");
+      console.log(platformArray);
+      for (var i = 0; i < platformArray.length; i++) {
+        var newBtn = $("<button>")
+          .addClass("list-group-item list-group-item-action sysOption")
+          .attr("value", platformArray[i].name)
+          .attr("data-id", platformArray[i].id)
+          .text(" " + platformArray[i].name);
+        $(".sysDiv").append(newBtn);
+      };
+    });
   };
-  // - UPDATE THE DROPDOWN ON SELECTING AN OPTION
-  $(".sysOption").on("click", function() {
-    $("#sysHeader").html(" ");
-    $("#sysHeader").text($(this).attr("value"));
-  });
+  getPlatforms();
 
   // CATEGORIES
   // - POPULATE THE DROPDOWN
-  var categories = ["Action", "Adventure", "Simlution", "Role-Playing"];
-  $("#catDiv").html(" ");
-  for (var j = 0; j < categories.length; j++) {
-    var newLabel = $("<label>").addClass("smsquare-btn");
-    var newBtnLabel = $("<input>").addClass("catOption").attr("type", "radio").attr("name", "categories").attr("autocomplete", "off").attr("value", categories[j]);
-    var newBtnText = $("<span>").addClass("link-text").text(" " + categories[j]);
-    newLabel.append(newBtnLabel);
-    newLabel.append(newBtnText);
-    $("#catDiv").append(newLabel);
+  var genreArray = [];
+  function getGenres() {
+    $.get("http://localhost:3001/genres", function(data) {
+      for (var a = 0; a < data.body.length; a++) {
+        genreArray.push({id: data.body[a].id, name: data.body[a].name});
+      };
+    })
+    .done(function() {
+      $(".catDiv").html(" ");
+      console.log(genreArray);
+      for (var i = 0; i < genreArray.length; i++) {
+        var newBtn = $("<button>")
+          .addClass("list-group-item list-group-item-action catOption")
+          .attr("value", genreArray[i].name)
+          .attr("data-id", genreArray[i].id)
+          .text(" " + genreArray[i].name);
+        $(".catDiv").append(newBtn);
+      };
+    });
   };
-  // - UPDATE THE DROPDOWN ON SELECTING AN OPTION
-  $(".catOption").on("click", function() {
-    $("#catHeader").html(" ");
-    $("#catHeader").text($(this).attr("value"));
-  });
+  getGenres();
 
-  // NAVBAR TOGGLE DROPDOWN
-  $(".dropdown-toggle").on("click", function() {
-    if ($(this).attr("aria-expanded") === "false") {
-      $(this).parent().addClass("show");
-      $(this).attr("aria-expanded", "true");
-    } else if ($(this).attr("aria-expanded") === "true") {
-      $(this).parent().removeClass("show");
-      $(this).attr("aria-expanded", "false");
-    };
+  // UPDATE THE DROPDOWN ON SELECTING AN OPTION
+  var selectBtn = $("<button>").addClass("delButton");
+
+  $(document).on("click", ".sysOption", function() {
+    $(".sysSelected").html(" ");
+    selectBtn.text($(this).attr("value"));
+    $(".sysSelected").append(selectBtn);
+    userPicks.sysName = $(this).attr("value");
+    userPicks.sysId = $(this).attr("data-id");
+    console.log(userPicks);
+  });
+  $(document).on("click", ".catOption", function() {
+    $(".catSelected").html(" ");
+    selectBtn.text($(this).attr("value"));
+    $(".catSelected").append(selectBtn);
+    userPicks.catName = $(this).attr("value");
+    userPicks.catId = $(this).attr("data-id");
+    console.log(userPicks);
   });
 });
